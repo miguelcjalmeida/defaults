@@ -6,13 +6,13 @@ colors:
 default_hour: 9
 default_minute: 0
 editor: vim
-encrypt: false
+encrypt: true
 highlight: true
 indent_character: '|'
 journals:
   default: $DEFAULTS_JOURNAL_PERSONAL
   work: $DEFAULTS_JOURNAL_WORK
-linewrap: 79
+linewrap: false
 tagsymbols: '@'
 template: false
 timeformat: '%d/%m/%Y %H:%M'
