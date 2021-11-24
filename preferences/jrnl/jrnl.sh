@@ -1,1 +1,1 @@
-alias journal='winpty jrnl'
+alias journal='jrnl'

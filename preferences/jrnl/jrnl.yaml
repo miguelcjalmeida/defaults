@@ -1,8 +1,8 @@
 colors:
-  body: none
-  date: none
-  tags: none
-  title: none
+  body: GREEN
+  date: RED
+  tags: BLUE
+  title: CYAN
 default_hour: 9
 default_minute: 0
 editor: vim
@@ -10,10 +10,10 @@ encrypt: false
 highlight: true
 indent_character: '|'
 journals:
-  default: D:/me/pessoal/journal/pessoal.txt
-  work: D:/me/pessoal/journal/work.txt
+  default: $DEFAULTS_JOURNAL_PERSONAL
+  work: $DEFAULTS_JOURNAL_WORK
 linewrap: 79
 tagsymbols: '@'
 template: false
-timeformat: '%Y-%m-%d %H:%M'
+timeformat: '%d/%m/%Y %H:%M'
 version: v2.8.3
