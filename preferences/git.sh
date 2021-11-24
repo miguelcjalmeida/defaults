@@ -1,0 +1,5 @@
+alias gits='git status'
+alias gitl='git log --graph --all --oneline'
+alias gitd='git diff'
+alias gg='git fetch && git fetch --tags -f && git fetch origin --prune && git status && gitk --all -r'
+alias tf='terraform'
