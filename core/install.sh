@@ -1,5 +1,6 @@
 install-configs() {
     source-preference "jrnl/install.sh"    
+    source-preference "windows-terminal/install.sh"    
     inputrc=`cat $DEFAULTS_ROOT_PATH/.inputrc`
     save-rc ".inputrc" "$inputrc"
 }

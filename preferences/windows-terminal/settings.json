@@ -16,7 +16,7 @@
         },
         {
             "command": "find",
-            "keys": "ctrl+shift+f"
+            "keys": "f2"
         },
         {
             "command": 
