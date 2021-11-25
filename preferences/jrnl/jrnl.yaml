@@ -11,7 +11,9 @@ highlight: true
 indent_character: '|'
 journals:
   default: $DEFAULTS_JOURNAL_PERSONAL
-  work: $DEFAULTS_JOURNAL_WORK
+  work:
+    journal: $DEFAULTS_JOURNAL_WORK
+    encrypt: false 
 linewrap: false
 tagsymbols: '@'
 template: false
