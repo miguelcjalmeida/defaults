@@ -8,13 +8,13 @@ install-configs() {
 }
 
 save-config() {
-    fileDir="$(dirname "$1")"
+    fileDir="$(dirname "$DEFAULTS_CONFIG/$1")"
     mkdir -p "$fileDir"
     echo "$2" > "$DEFAULTS_CONFIG/$1"
 }
 
 save-rc() {
-    fileDir="$(dirname "$1")"
+    fileDir="$(dirname "$DEFAULTS_HOME/$1")"
     mkdir -p "$fileDir"
     echo "$2" > "$DEFAULTS_HOME/$1"
 }
