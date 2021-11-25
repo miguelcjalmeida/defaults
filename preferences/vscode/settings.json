@@ -1,0 +1,6 @@
+{
+    "window.zoomLevel": 2,
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "tabnine.experimentalAutoImports": true,
+    "terminal.integrated.defaultProfile.windows": "Git Bash"
+}
