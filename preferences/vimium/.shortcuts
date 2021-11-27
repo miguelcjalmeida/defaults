@@ -1,0 +1,99 @@
+    #map f LinkHints.activate
+    #unmap <a-f1>
+    #mapKey <c-s-e> <esc>
+    unmapAll
+
+    # Scroll navigation
+    map w scrollUp
+    map s scrollDown
+    map a scrollLeft
+    map d scrollRight
+    map W scrollPageUp
+    map S scrollPageDown
+    map qq scrollToTop
+    map Q scrollToBottom
+
+    # Flow navigation
+    map qe focusInput
+    map qd nextFrame
+    map qs mainFrame
+    map qw parentFrame
+    map <f1> switchFocus
+    map qf simulateBackspace
+    map f LinkHints.activateEdit
+    map <space> LinkHints.activateHover
+    map qk visitPreviousTab
+
+    # Url navigation
+    map oU goUp
+    map ou goToRoot
+    map oj LinkHints.activateSearchLinkText
+    map oy openUrl url="https://youtube.com"
+    map og openUrl url="https://google.com"
+    map op openCopiedUrlInCurrentTab
+    map oP openCopiedUrlInNewTab
+    map oo Vomnibar.activate
+    map O Vomnibar.activateInNewTab
+    map o; Vomnibar.activateBookmarks
+    map o: Vomnibar.activateBookmarksInNewTab
+    map oh Vomnibar.activateHistory
+    map oH Vomnibar.activateHistoryInNewTab
+    map ok Vomnibar.activateTabs
+    map oc LinkHints.activateOpenVomnibar
+    map oi LinkHints.activateOpenIncognito
+    map r reload
+    map R reloadTab
+
+    # History navigation
+    map z goBack
+    map x goForward
+
+    # Tab navigation
+    map <c-l> nextTab
+    map <c-j> previousTab
+    map <c-i> firstTab
+    map <c-k> lastTab
+    map <a-d> nextTab
+    map <a-a> previousTab
+    map <a-w> firstTab
+    map <a-s> lastTab
+    map K createTab
+    map kk duplicateTab
+    map <c-q> removeTab
+    map <a-q> removeTab
+    map kq removeTab
+    map ko restoreTab
+    map kw joinTabs
+    map ks sortTabs sort="recency"
+    map kd sortTabs sort="createTime"
+    map kl togglePinTab 
+    map kp captureTab
+    map ki openUrl incognito url="about:blank"
+
+
+    # Search bar
+    map ql enterFindMode
+    map l performFind
+    map L performBackwardsFind
+    map / performAnotherFind
+
+    # Modes
+    map i enterInsertMode
+    map ; enterVisualMode
+    map ` showHelp
+
+    # Copying texts
+    map co copyCurrentUrl
+    map cu copyCurrentTitle
+    map cJ LinkHints.activateCopyLinkUrl
+    map cj LinkHints.activateCopyLinkText
+
+    # Open images
+    map v LinkHints.activateOpenImage
+
+    # Open links 
+    map j LinkHints.activate
+    map J LinkHints.activateOpenInNewTab
+    map <a-j> LinkHints.activateWithQueue
+    map <a-f> LinkHints.activateWithQueue
+
