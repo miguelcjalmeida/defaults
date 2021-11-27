@@ -1,0 +1,1 @@
+regedit.exe //S "$DEFAULTS_HOME/scoop/apps/7zip/current/install-context.reg"

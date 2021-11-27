@@ -3,8 +3,13 @@ install-configs() {
     source-preference "jrnl/install.sh"    
     source-preference "windows-terminal/install.sh"  
     source-preference "vscode/install.sh"   
+    source-preference "windows/timezone.sh"   
     inputrc=`cat $DEFAULTS_ROOT_PATH/.inputrc`
     save-rc ".inputrc" "$inputrc"
+}
+
+install-apps() {
+    source "$DEFAULTS_ROOT_PATH/apps/init.sh"
 }
 
 save-config() {

@@ -86,7 +86,7 @@
         [
             {
                 "closeOnExit": "always",
-                "commandline": "\"%PROGRAMFILES%\\git\\usr\\bin\\bash.exe\" -i -l",
+                "commandline": "\"%USERPROFILE%\\scoop\\apps\\git\\current\\bin\\bash.exe\" -i -l",
                 "guid": "{a8271721-09af-42a3-97e9-a0eeec9169cc}",
                 "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
                 "name": "Git Bash",                

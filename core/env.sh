@@ -1,10 +1,12 @@
 export DEFAULTS_CORE_PATH="$(dirname "${BASH_SOURCE[0]}")"
 export DEFAULTS_ROOT_PATH="$DEFAULTS_CORE_PATH/.."
 export DEFAULTS_PREFERENCES_PATH="$DEFAULTS_ROOT_PATH/preferences"
+export DEFAULTS_APPS_PATH="$DEFAULTS_ROOT_PATH/apps"
 export DEFAULTS_DEV="$DEFAULTS_ROOT_PATH/.."
 export DEFAULTS_MYDOCS="D:/me/pessoal"
 export DEFAULTS_HOME=~
 export DEFAULTS_CONFIG=~/.config
+export DEFAULTS_SCOOP_APP="$DEFAULTS_HOME/scoop/apps"
 export XDG_CONFIG_HOME="$DEFAULTS_CONFIG"
 
 source-preference "jrnl/env.sh"
