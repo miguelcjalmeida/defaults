@@ -49,10 +49,6 @@
     map x goForward
 
     # Tab navigation
-    map <c-l> nextTab
-    map <c-j> previousTab
-    map <c-i> firstTab
-    map <c-k> lastTab
     map <a-d> nextTab
     map <a-a> previousTab
     map <a-w> firstTab
