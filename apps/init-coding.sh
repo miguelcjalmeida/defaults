@@ -1,0 +1,6 @@
+source "$DEFAULTS_APPS_PATH/git-manager.sh"
+source "$DEFAULTS_APPS_PATH/7-zip.sh"
+source "$DEFAULTS_APPS_PATH/browser.sh"
+source "$DEFAULTS_APPS_PATH/editors.sh"
+source "$DEFAULTS_APPS_PATH/windows-terminal.sh"
+source "$DEFAULTS_APPS_PATH/image-tools.sh"

@@ -1,4 +1,4 @@
-install-configs() {
+install-preferences() {
     source-preference "fonts/install.sh"    
     source-preference "jrnl/install.sh"    
     source-preference "windows-terminal/install.sh"  
@@ -9,7 +9,17 @@ install-configs() {
 }
 
 install-apps() {
-    source "$DEFAULTS_ROOT_PATH/apps/init.sh"
+    if [[ -z "$1" ]]; then
+        echo "Parameter is missing: all/coding/personal"
+        return 1
+    fi
+
+    fileSuffix="-$1"
+    if [ "$1" == "all" ]; then
+        fileSuffix=""
+    fi
+
+    source "$DEFAULTS_ROOT_PATH/apps/init$fileSuffix.sh"
 }
 
 save-config() {
