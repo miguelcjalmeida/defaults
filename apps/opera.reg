@@ -1,0 +1,36 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Opera\Capabilities]
+"ApplicationDescription"="Opera"
+"ApplicationIcon"="%USERPROFILE%\\scoop\\apps\\opera-gx\\current\\81.0.4196.61\\opera.exe,0"
+"ApplicationName"="Opera"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Opera\Capabilities\FileAssociations]
+".htm"="OperaURL"
+".html"="OperaURL"
+".shtml"="OperaURL"
+".xht"="OperaURL"
+".xhtml"="OperaURL"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Opera\Capabilities\URLAssociations]
+"ftp"="OperaURL"
+"http"="OperaURL"
+"https"="OperaURL"
+
+; Register to Default Programs
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\RegisteredApplications]
+"Opera"="Software\\Opera\\Capabilities"
+
+; OperaURL HANDLER:
+
+[HKEY_LOCAL_MACHINE\Software\Classes\OperaURL]
+@="Opera Document"
+"FriendlyTypeName"="Opera Document"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\OperaURL\shell]
+
+[HKEY_LOCAL_MACHINE\Software\Classes\OperaURL\shell\open]
+
+[HKEY_LOCAL_MACHINE\Software\Classes\OperaURL\shell\open\command]
+@="\"%USERPROFILE%\\scoop\\apps\\opera-gx\\current\\81.0.4196.61\\opera.exe\" \"%1\""
