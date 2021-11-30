@@ -20,7 +20,7 @@
     map qw parentFrame
     map <f1> switchFocus
     map qf simulateBackspace
-    map f LinkHints.activateEdit
+    map F LinkHints.activateEdit
     map <space> LinkHints.activateHover
     map qk visitPreviousTab
 
@@ -87,7 +87,8 @@
     # Open images
     map v LinkHints.activateOpenImage
 
-    # Open links 
+    # Open links     
+    map f LinkHints.activate
     map j LinkHints.activate
     map J LinkHints.activateOpenInNewTab
     map <a-j> LinkHints.activateWithQueue
