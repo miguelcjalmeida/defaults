@@ -1,4 +1,4 @@
-settingsPath="$(dirname "${BASH_SOURCE[0]}")/settings.json"
+settingsPath="$DEFAULTS_PREFERENCES/windows-terminal/settings.json"
 
 #install in scoop folder
 targetPath="$APPDATA/../Local/Microsoft/Windows Terminal"

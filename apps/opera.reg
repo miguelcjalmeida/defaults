@@ -2,7 +2,7 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Opera\Capabilities]
 "ApplicationDescription"="Opera"
-"ApplicationIcon"="%USERPROFILE%\\scoop\\apps\\opera-gx\\current\\81.0.4196.61\\opera.exe,0"
+"ApplicationIcon"="C:\\Users\\Su\\scoop\\apps\\opera-gx\\current\\81.0.4196.61\\opera.exe,0"
 "ApplicationName"="Opera"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Opera\Capabilities\FileAssociations]
@@ -33,4 +33,4 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\Software\Classes\OperaURL\shell\open]
 
 [HKEY_LOCAL_MACHINE\Software\Classes\OperaURL\shell\open\command]
-@="\"%USERPROFILE%\\scoop\\apps\\opera-gx\\current\\81.0.4196.61\\opera.exe\" \"%1\""
+@="\"C:\\Users\\Su\\scoop\\apps\\opera-gx\\current\\81.0.4196.61\\opera.exe\" \"%1\""

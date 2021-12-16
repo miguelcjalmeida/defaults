@@ -1,2 +1,2 @@
-source "$(dirname "${BASH_SOURCE[0]}")/output.sh"
-source "$(dirname "${BASH_SOURCE[0]}")/navigation.sh"
+source "$DEFAULTS_PREFERENCES/shortcuts/output.sh"
+source "$DEFAULTS_PREFERENCES/shortcuts/navigation.sh"

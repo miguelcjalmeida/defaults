@@ -1,7 +1,7 @@
 {
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 1,
     "workbench.colorTheme": "Gruvbox Dark Medium",
     "tabnine.experimentalAutoImports": true,
-    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.shell.windows": "$DEFAULTS_SCOOP_APP/git/current/bin/bash.exe",
     "editor.fontFamily": "Fira Mono Medium"
 }

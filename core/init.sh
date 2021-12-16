@@ -1,7 +1,8 @@
-source "$(dirname "${BASH_SOURCE[0]}")/source.sh"
-source "$(dirname "${BASH_SOURCE[0]}")/env.sh"
-source "$(dirname "${BASH_SOURCE[0]}")/secrets.sh"
-source "$(dirname "${BASH_SOURCE[0]}")/install.sh"
+source "$DEFAULTS_ROOT/core/source.sh"
+source "$DEFAULTS_ROOT/core/path.sh"
+source "$DEFAULTS_ROOT/core/env.sh"
+source "$DEFAULTS_CORE/secrets.sh"
+source "$DEFAULTS_CORE/install.sh"
 
 source-preference "git.sh"
 source-preference "shell.sh"

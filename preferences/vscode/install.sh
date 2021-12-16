@@ -1,7 +1,13 @@
-settingsPath="$(dirname "${BASH_SOURCE[0]}")/settings.json"
-extensionsPath="$(dirname "${BASH_SOURCE[0]}")/extensions"
+settingsPath="$DEFAULTS_PREFERENCES/vscode/settings.json"
+extensionsPath="$DEFAULTS_PREFERENCES/vscode/extensions"
 
-cp "$settingsPath" "$APPDATA/Code/User" 
+scoopApp=$(double-escape-path "$DEFAULTS_SCOOP_APP")
+
+settings=`cat "$settingsPath"`
+settings=${settings/\$DEFAULTS_SCOOP_APP/$scoopApp}
+
+echo -e "$settings"
+echo -e "$settings" > "$APPDATA/Code/User/settings.json" 
+
 mkdir -p "$DEFAULTS_HOME/.vscode" 
 cp -r -n "$extensionsPath" "$DEFAULTS_HOME/.vscode" 
-

@@ -4,7 +4,7 @@ install-preferences() {
     source-preference "windows-terminal/install.sh"  
     source-preference "vscode/install.sh"   
     source-preference "windows/timezone.sh"   
-    inputrc=`cat $DEFAULTS_ROOT_PATH/.inputrc`
+    inputrc=`cat $DEFAULTS_ROOT/.inputrc`
     save-rc ".inputrc" "$inputrc"
 }
 
@@ -19,7 +19,7 @@ install-apps() {
         fileSuffix=""
     fi
 
-    source "$DEFAULTS_ROOT_PATH/apps/init$fileSuffix.sh"
+    source "$DEFAULTS_ROOT/apps/init$fileSuffix.sh"
 }
 
 save-config() {
