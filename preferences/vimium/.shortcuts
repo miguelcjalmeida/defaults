@@ -16,95 +16,119 @@ map qq scrollToTop
 map Q scrollToBottom
 
 # Visual Mode
-map qw LinkHints.activateSelect visual
-mapKey <a-q:v> <esc> # exit visual mode
-mapKey <w:v> k
-mapKey <a:v> b
-mapKey <s:v> j
-mapKey <d:v> w
-mapKey <s-a:v> h
-mapKey <s-d:v> l
-mapKey <s-w:v> k
-mapKey <s-s:v> $
-mapKey <q:v> o
-# Flow navigation
+map ; enterVisualMode
+map qw LinkHints.activateSelect visual  # select text entering visual mode (vmode)
+mapKey <a-q:v> <esc>    # exit word mode
+mapKey <w:v> k          # move to previous line
+mapKey <a:v> b          # move to previous word
+mapKey <s:v> j          # move to next line
+mapKey <d:v> w          # move to next word
+mapKey <s-a:v> h        # move one char to the left
+mapKey <s-d:v> l        # move one char to the right
+mapKey <s-w:v> k        # workaround to go to beginning
+mapKey <s-s:v> $        # go to the end of line
+mapKey <q:v> o          # invert tail and head
+mapKey <e:v> p          # search in tab
+mapKey <E:v> P          # search new tab
+mapKey <c:v> y          # copy
+
+# Open links     
+map e LinkHints.activate match="a,input,select,textarea,button,iframe,ul li,[aria-label]"
+map E LinkHints.activateOpenInNewTab match="a,input,select,textarea,button,iframe,ul li,[aria-label]"
+map <a-s-e> LinkHints.activateWithQueue match="a,input,select,textarea,button,iframe,ul li,[aria-label]"
+map <space> LinkHints.activateHover match="a,input,select,textarea,button,iframe,ul li,[aria-label]"
+map q1 mainFrame
+map q2 nextFrame
+map q3 parentFrame
+map q<enter> mainFrame $then=qs $else=qs
+map qs LinkHints.activateHover match="iframe, section, main, [contenteditable], .section-container"
 mapKey ` <enter>
-mapKey <a-q:i> <esc>
-map qe focusInput clickable="input,select,textarea"
-map <f1> switchFocus
-map qf simulateBackspace
-map F LinkHints.activateEdit
-map <space> LinkHints.activateHover
-map qk visitPreviousTab
-#map qd nextFrame
-#map qs mainFrame
-#map qw parentFrame
-
-# Url navigation
-map oU goUp
-map ou goToRoot
-map oj LinkHints.activateSearchLinkText
-map oy openUrl url="https://youtube.com"
-map og openUrl url="https://google.com"
-map op openCopiedUrlInCurrentTab
-map oP openCopiedUrlInNewTab
-map oo Vomnibar.activate
-map O Vomnibar.activateInNewTab
-map o; Vomnibar.activateBookmarks
-map o: Vomnibar.activateBookmarksInNewTab
-map oh Vomnibar.activateHistory
-map oH Vomnibar.activateHistoryInNewTab
-map ok Vomnibar.activateTabs
-map oc LinkHints.activateOpenVomnibar
-map oi LinkHints.activateOpenIncognito
-map r reload
-map R reloadTab
-
-# History navigation
-map z goBack
-map x goForward
+mapKey <a-q> <esc> 
+mapKey <a-e> <enter>
 
 # Tab navigation
 map <a-d> nextTab
 map <a-a> previousTab
 map <a-w> firstTab
 map <a-s> lastTab
-map K createTab
-map kk duplicateTab
-map <c-q> removeTab
-map <a-q> removeTab
-map kq removeTab
-map ko restoreTab
-map kw joinTabs
-map ks sortTabs sort="recency"
-map kd sortTabs sort="createTime"
-map kl togglePinTab 
-map kp captureTab
-map ki openUrl incognito url="about:blank"
 
-# Search bar
-map ql enterFindMode
-map l performFind
-map L performBackwardsFind
-map / performAnotherFind
+# Flow navigation
+map <a-q:i> dispatchEvent type="keydown" code="Escape" key="Escape" keyCode=27
 
-# Modes
-map i enterInsertMode
-map ; enterVisualMode
-map ` showHelp
+# History navigation
+map z goBack
+map x goForward
 
-# Copying texts
-map co copyCurrentUrl
-map cu copyCurrentTitle
-map cJ LinkHints.activateCopyLinkUrl
-map cj LinkHints.activateCopyLinkText
+#mapKey map <a-q:i> dispatchEvent type="keydown" code="Escape" key="Escape" keyCode=27 $then="<f1>"
+#mapKey <a-q> dispatchEvent type="keydown" code="Escape" key="Escape" keyCode=27                               # Cancel the hints
 
-# Open images
-map v LinkHints.activateOpenImage
+#mapKey <a-q:i> <esc>
+#map qe focusInput clickable="input,select,textarea"
+#map <f1> switchFocus
+#map qf simulateBackspace
+#map F LinkHints.activateEdit
+#map <space> LinkHints.activateHover
+#map qk visitPreviousTab
+##map qd nextFrame
+##map qs mainFrame
+##map qw parentFrame
+#
+## Url navigation
+#map oU goUp
+#map ou goToRoot
+#map oj LinkHints.activateSearchLinkText
+#map oy openUrl url="https://youtube.com"
+#map og openUrl url="https://google.com"
+#map op openCopiedUrlInCurrentTab
+#map oP openCopiedUrlInNewTab
+map oo Vomnibar.activate
+#map O Vomnibar.activateInNewTab
+#map o; Vomnibar.activateBookmarks
+#map o: Vomnibar.activateBookmarksInNewTab
+#map oh Vomnibar.activateHistory
+#map oH Vomnibar.activateHistoryInNewTab
+#map ok Vomnibar.activateTabs
+#map oc LinkHints.activateOpenVomnibar
+#map oi LinkHints.activateOpenIncognito
+#map r reload
+#map R reloadTab
+#
 
-# Open links     
-map f LinkHints.activate
-map j LinkHints.activate
-map J LinkHints.activateOpenInNewTab
-map <a-j> LinkHints.activateWithQueue
-map <a-f> LinkHints.activateWithQueue
+#
+## Tab navigation
+#map <a-d> nextTab
+#map <a-a> previousTab
+#map <a-w> firstTab
+#map <a-s> lastTab
+#map K createTab
+#map kk duplicateTab
+#map <c-q> removeTab
+#map <a-q> removeTab
+#map kq removeTab
+#map ko restoreTab
+#map kw joinTabs
+#map ks sortTabs sort="recency"
+#map kd sortTabs sort="createTime"
+#map kl togglePinTab 
+#map kp captureTab
+#map ki openUrl incognito url="about:blank"
+#
+## Search bar
+#map ql enterFindMode
+#map l performFind
+#map L performBackwardsFind
+#map / performAnotherFind
+#
+## Modes
+#map i enterInsertMode
+#map ` showHelp
+#
+## Copying texts
+#map co copyCurrentUrl
+#map cu copyCurrentTitle
+#map cJ LinkHints.activateCopyLinkUrl
+#map cj LinkHints.activateCopyLinkText
+#
+## Open images
+#map v LinkHints.activateOpenImage
+
