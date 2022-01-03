@@ -35,8 +35,11 @@ mapKey <c:v> y          # copy
 # Open links     
 map e LinkHints.activate match="a,input,select,textarea,button,iframe,ul li,[aria-label]"
 map E LinkHints.activateOpenInNewTab match="a,input,select,textarea,button,iframe,ul li,[aria-label]"
+map qd LinkHints.activateEdit match="input,select,textarea,button"
+
 map <a-s-e> LinkHints.activateWithQueue match="a,input,select,textarea,button,iframe,ul li,[aria-label]"
 map <space> LinkHints.activateHover match="a,input,select,textarea,button,iframe,ul li,[aria-label]"
+
 map q1 mainFrame
 map q2 nextFrame
 map q3 parentFrame
@@ -51,29 +54,20 @@ map <a-d> nextTab
 map <a-a> previousTab
 map <a-w> firstTab
 map <a-s> lastTab
+map qz visitPreviousTab
+map q<tab> Vomnibar.activateTabs
+map qr LinkHints.activateOpenIncognito
+map qf openUrl reuse="newFg"
 
 # Flow navigation
 map <a-q:i> dispatchEvent type="keydown" code="Escape" key="Escape" keyCode=27
+map <a-e:i> dispatchEvent type="keydown" code="Enter" key="Enter" keyCode=13
 
 # History navigation
 map z goBack
 map x goForward
 
-#mapKey map <a-q:i> dispatchEvent type="keydown" code="Escape" key="Escape" keyCode=27 $then="<f1>"
-#mapKey <a-q> dispatchEvent type="keydown" code="Escape" key="Escape" keyCode=27                               # Cancel the hints
-
-#mapKey <a-q:i> <esc>
-#map qe focusInput clickable="input,select,textarea"
-#map <f1> switchFocus
-#map qf simulateBackspace
-#map F LinkHints.activateEdit
-#map <space> LinkHints.activateHover
-#map qk visitPreviousTab
-##map qd nextFrame
-##map qs mainFrame
-##map qw parentFrame
-#
-## Url navigation
+# Url navigation
 #map oU goUp
 #map ou goToRoot
 #map oj LinkHints.activateSearchLinkText
@@ -81,13 +75,12 @@ map x goForward
 #map og openUrl url="https://google.com"
 #map op openCopiedUrlInCurrentTab
 #map oP openCopiedUrlInNewTab
-map oo Vomnibar.activate
+map <esc> Vomnibar.activate
 #map O Vomnibar.activateInNewTab
 #map o; Vomnibar.activateBookmarks
 #map o: Vomnibar.activateBookmarksInNewTab
 #map oh Vomnibar.activateHistory
 #map oH Vomnibar.activateHistoryInNewTab
-#map ok Vomnibar.activateTabs
 #map oc LinkHints.activateOpenVomnibar
 #map oi LinkHints.activateOpenIncognito
 #map r reload
